@@ -7,6 +7,7 @@ def deal_card
       card = deal_card
       card.to be > 0
       card.to be < 12
+    end
 
 def display_card_total
   # code #display_card_total here
