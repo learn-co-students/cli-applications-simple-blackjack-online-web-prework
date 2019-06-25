@@ -5,8 +5,8 @@ end
 def deal_card
  20.times do 
       card = deal_card
-      expect(card).to be > 0
-      expect(card).to be < 12
+      card.to be > 0
+      card.to be < 12
 
 def display_card_total
   # code #display_card_total here
