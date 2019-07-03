@@ -3,22 +3,21 @@ def welcome
 end
 
 def deal_card
- 20.times do 
-      card = deal_card
-      card.to be > 0
-      card.to be < 12
-    end
-
-def display_card_total
-  # code #display_card_total here
+  rand(1..11)
 end
-
+def 
+  display_card_total 8
+  "your cards add up to" #{display_card_totalcard_total}
+end  
+def
+puts display_card_total()
+end
 def prompt_user
-  # code #prompt_user here
+  puts "Type 'h' to hit or 's' to stay".
 end
 
 def get_user_input
-  # code #get_user_input here
+  gets.strip
 end
 
 def end_game
