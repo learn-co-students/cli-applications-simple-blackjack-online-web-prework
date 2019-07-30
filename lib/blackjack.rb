@@ -29,7 +29,7 @@ def initial_round
 end
 
 def hit? (card_total)
-  prompt_user
+  #prompt_user
   ui = get_user_input
   
   until ["h", "s"].include?(ui)
@@ -40,9 +40,11 @@ def hit? (card_total)
   
   if ui == 'h'
     card_total += deal_card
-  else
-   
+  elsif ui == 's'
+    puts display_card_total 
+    puts "Thanks for playing!"
   end
+  
   card_total
 end
 
@@ -57,8 +59,9 @@ end
 def runner
   welcome
   card_total = initial_round
+  prompt_user
   
-  until card_total >= 21
+  until card_total > 21 || get_user_input == 's'
     card_total = hit? (card_total)
     display_card_total(card_total)
   end
