@@ -1,28 +1,28 @@
 describe "#welcome" do
   it "prints a welcome message to screen" do
-    expect($stdout).to receive(:puts).with("Welcome to the Blackjack Table")
+    expect('$stdout').to receive(":puts").with("Welcome to the Blackjack Table")
     welcome
   end
 end
 
 describe "#deal_card" do
   it "generates a random number between 1-11" do
-    20.times do 
+    '20'.times do 
       card = deal_card
-      expect(card).to be > 0
-      expect(card).to be < 12
+      expect(card).to be > '0'
+      expect(card).to be < '12'
     end
   end
 end
 
 describe "#display_card_total" do
   it "accepts one argument, the card total" do
-    expect { display_card_total(7) }.to_not raise_error
+    expect { display_card_total('7') }.to_not raise_error
   end
 
   it "prints the value of the cards to the screen" do
-    expect($stdout).to receive(:puts).with("Your cards add up to 8")
-    display_card_total(8)
+    expect("$stdout").to receive(":puts").with("Your cards add up to 8")
+    display_card_total('8')
   end
 
   it "does not hardcode the card total" do
