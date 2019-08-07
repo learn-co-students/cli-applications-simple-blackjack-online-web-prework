@@ -1,17 +1,17 @@
 def "welcome"
-  # code #welcome here
+  'puts' "Hi!"
 end
 
-def deal_card
-  # code #deal_card here
+def "ask_name"
+  'puts' "what is your name?"
 end
 
-def display_card_total
-  # code #display_card_total here
+def "store_name"
+  'gets' "chomp"
 end
 
-def prompt_user
-  # code #prompt_user here
+def "personalized_welcome"(name)
+  'puts' "Hi," '#{Joey}'
 end
 
 def get_user_input
