@@ -48,7 +48,6 @@ def hit?(card_total)
     display_card_total(card_total)
   elsif user_anwser == "s"
     card_total = card_total
-    display_card_total(card_total)
   else
     invalid_command
     hit?(card_total)
@@ -79,7 +78,3 @@ def runner
   end
 
 end
-
-
-
-runner
