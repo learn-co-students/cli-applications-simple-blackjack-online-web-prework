@@ -73,7 +73,7 @@ def runner
     user_points = hit?(user_points)
   end
   if user_points > 21
-  end_game(user_points)
+   end_game(user_points)
 
   end
 
