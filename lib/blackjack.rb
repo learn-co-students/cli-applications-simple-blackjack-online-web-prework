@@ -25,9 +25,11 @@ end
 
 def initial_round
   cards = deal_card + deal_card 
-   return display_card_total(cards)
-  cards
+  display_card_total(cards)
+  return cards
   end
+
+ 
 
 
 def hit?(h_or_s)
@@ -58,6 +60,12 @@ end
 #####################################################
 
 def runner
-  # code runner here
+    welcome
+  total = initial_round 
+  until total > 21 do 
+    total = hit?(total)
+    display_card_total(total)
+  end
+  end_game(total)
 end
     
