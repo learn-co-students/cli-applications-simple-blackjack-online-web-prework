@@ -4,35 +4,48 @@ def welcome
 end
 
 def deal_card
-  # code #deal_card here
+  card = rand(1..11)
+  card
 end
-
-def display_card_total
-  # code #display_card_total here
+#passed
+def display_card_total(card_total)
+  message = "Your cards add up to #{card_total}"
+  puts message
 end
-
+#passed
 def prompt_user
-  # code #prompt_user here
+  puts "Type 'h' to hit or 's' to stay"
 end
-
+#passed
 def get_user_input
-  # code #get_user_input here
+  gets.chomp
 end
-
-def end_game
-  # code #end_game here
+#passed
+def end_game(num)
+  puts "Sorry, you hit #{num}. Thanks for playing!" # code #end_game here
 end
-
+#passed
 def initial_round
-  # code #initial_round here
+  first = deal_card + deal_card
+  display_card_total(first)
+  return first
 end
-
-def hit?
-  # code hit? here
+#passed
+def hit?(card_total)
+  prompt_user
+  
+  if get_user_input == "h"
+    card_total += deal_card
+  elsif get_user_input == "s"
+    card_total
+  else
+    invalid_command
+    hit?(card_total)
+  end
 end
 
 def invalid_command
-  # code invalid_command here
+  puts "Please enter a valid command"# code invalid_command here
 end
 
 #####################################################
