@@ -11,6 +11,7 @@ def deal_card
 end
 
 def display_card_total(deal_card)
+  #binding.pry
   puts "Your cards add up to #{deal_card}"
   # result = nil
   # deal_card.sum do |total|
@@ -20,7 +21,14 @@ end
 # end
 # code #display_card_total here
 
-def prompt_user
+def prompt_user 
+  puts "Type 'h' to hit or 's' to stay"
+# display_card_total.length do |data| += 1
+#   if 'h' == deal_card.length 
+#   elsif 's' == nil
+#   end
+
+  #display_card_total.
   # code #prompt_user here
 end
 
