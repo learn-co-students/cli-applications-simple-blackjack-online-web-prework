@@ -1,14 +1,24 @@
+require 'pry'
+
 def welcome
+  puts "Welcome to the Blackjack Table"
   # code #welcome here
 end
 
 def deal_card
+  rand(1...11)
   # code #deal_card here
 end
 
-def display_card_total
-  # code #display_card_total here
+def display_card_total(deal_card)
+  puts "Your cards add up to #{deal_card}"
+  # result = nil
+  # deal_card.sum do |total|
+  # total = result
 end
+# result
+# end
+# code #display_card_total here
 
 def prompt_user
   # code #prompt_user here
