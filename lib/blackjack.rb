@@ -38,18 +38,18 @@ def initial_round
   # binding.pry
 end
 
-def hit?(card_total)
+def hit?(total)
   prompt_user
-  input = get_user_input.downcase
-  binding.pry
+  input = get_user_input
   if input == "h"
-    deal_card
+    total += deal_card
   elsif input == "s"
-    
+    "u stay"
   else
     invalid_command
+    prompt_user
   end
-  card_total
+  total
 end
 
 def invalid_command
