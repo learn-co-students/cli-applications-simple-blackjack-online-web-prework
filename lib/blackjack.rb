@@ -1,7 +1,6 @@
 require 'pry'
 
 def welcome
-  # code #welcome here
   puts "Welcome to the Blackjack Table"
 end
 
@@ -30,7 +29,6 @@ def end_game(score)
 end
 
 def initial_round
-  # code #initial_round here
   total = deal_card
   total += deal_card
   display_card_total(total)
@@ -44,16 +42,14 @@ def hit?(total)
   if input == "h"
     total += deal_card
   elsif input == "s"
-    "u stay"
+    total
   else
     invalid_command
-    prompt_user
+    hit?(total)
   end
-  total
 end
 
 def invalid_command
-  # code invalid_command here
   puts "Please enter a valid command"
 end
 
@@ -62,6 +58,15 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  welcome
+  total = initial_round
+  # binding.pry
+  until total > 21 do
+    total = hit?(total)
+    display_card_total(total)
+  end
+  end_game(total)
+  
 end
     
+# binding.pry
