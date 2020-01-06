@@ -38,11 +38,15 @@ def get_user_input
   # code #get_user_input here
 end
 
-def end_game
+def end_game(deal_card)
+puts "Sorry, you hit #{deal_card}. Thanks for playing!"
   # code #end_game here
 end
 
 def initial_round
+while (deal_card**2).size do
+  deal_card.sum
+end
   # code #initial_round here
 end
 
