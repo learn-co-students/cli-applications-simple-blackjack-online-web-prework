@@ -32,7 +32,9 @@ def prompt_user
   # code #prompt_user here
 end
 
-def get_user_input
+def get_user_input 
+  gets.chomp.strip
+  #binding.pry
   # code #get_user_input here
 end
 
