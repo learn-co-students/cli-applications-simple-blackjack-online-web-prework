@@ -44,17 +44,25 @@ puts "Sorry, you hit #{deal_card}. Thanks for playing!"
 end
 
 def initial_round
-while (deal_card**2).size do
-  deal_card.sum
-end
+  total = deal_card + deal_card
+display_card_total(total)
+return total
+
+  #do total.sum
+#end
   # code #initial_round here
 end
 
+# looked at solution
+
 def hit?
+  (get_user_input)prompt_user
+  return prompt_user
   # code hit? here
 end
 
 def invalid_command
+  puts "Please enter a valid command"
   # code invalid_command here
 end
 
